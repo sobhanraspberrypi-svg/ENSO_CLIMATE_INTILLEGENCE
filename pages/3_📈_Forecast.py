@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, i0
 
 # ── Path setup: works locally AND on Streamlit Cloud ─────────────
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +29,7 @@ def get_data():
 
 @st.cache_resource(ttl=6*3600, show_spinner="Training forecast model on historical ENSO data…")
 def get_model(nino_json):
-    nino_df = pd.read_json(nino_json)
+    nino_df = pd.read_json(io.StringIO(nino_json))
     nino_df["date"] = pd.to_datetime(nino_df["date"])
     return train_model(nino_df)
 
