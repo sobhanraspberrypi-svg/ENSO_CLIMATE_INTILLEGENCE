@@ -1,4 +1,4 @@
-import sys, os, i0
+import sys, os, io
 
 # ── Path setup: works locally AND on Streamlit Cloud ─────────────
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
