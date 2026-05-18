@@ -1,0 +1,12 @@
+# Cache files — auto-generated, not committed
+data/cache/*.csv
+
+# Keep the data directory and the GeoJSON in git
+!data/.gitkeep
+!data/india_states.geojson
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.env
